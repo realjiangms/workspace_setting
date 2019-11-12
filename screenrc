@@ -22,12 +22,18 @@ hardstatus on
 hardstatus alwayslastline
 shelltitle "$|bash"
 ##状态栏的显示信息定制 
+#Black status
 #hardstatus string '%{= kG}[ %{G}%c:%s %{g}][%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][ %{C} %{g}][%{kB} %d/%m %{w}%c %{g}]'
 #hardstatus string '%{= kG}[%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][ %{C} %{g}][%{kB} %d/%m %{w}%c %{g}]'
 hardstatus string '%{= kG}[%= %{= kw}%?%-Lw%?%{r}(%{W}%n*%f%t%?(%u)%?%{r})%{w}%?%+Lw%?%?%= %{g}][ %{C} %{g}][%d/%m %{g}]'
+#Blue status with load
+#hardstatus string '%{WB}%H %{W}| %{Y}%l %{W}| %?%{w}%-w%?%{+b g}[%{W}%{r}%n%{W} %t%?{%u}%?%{-b g}]%{W}%?%+w%?%=%{G}| %{Y}%d-%m-%Y %c:%s '
 
 ##shutdown the noise（关闭报警响铃）
 vbell off
+
+#Use /bin/bash as default shell
+shell /bin/bash
 
 ## 绑定 Ctrl+a-w 为查看所有窗口列表w to show the window list
 bind w windowlist -b
