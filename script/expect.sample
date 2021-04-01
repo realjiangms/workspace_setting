@@ -1,0 +1,12 @@
+#!/bin/bash
+#spawn ssh dev.foo.com
+cat > /tmp/expect.tmp <<'EOF'
+set timeout 10
+spawn ssh dev.foo.com
+expect "password:"
+send "password\r";
+expect "Welcome";
+send "tmux at -t zihao\r";
+interact;
+EOF
+expect /tmp/expect.tmp
